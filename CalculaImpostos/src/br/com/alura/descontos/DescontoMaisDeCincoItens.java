@@ -3,7 +3,7 @@ package br.com.alura.descontos;
 import br.com.alura.model.Desconto;
 import br.com.alura.model.Orcamento;
 
-public class DescontoMaisDeZincoItens implements Desconto{
+public class DescontoMaisDeCincoItens implements Desconto{
 
 	private Desconto desconto;
 

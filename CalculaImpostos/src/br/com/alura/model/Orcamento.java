@@ -26,4 +26,13 @@ public class Orcamento {
 		return Collections.unmodifiableList(itens);
 	}
 	
+	public boolean existe(String nomeItem){
+		for (Item item : itens) {
+			if(item.getNome().equals(nomeItem)){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 }
