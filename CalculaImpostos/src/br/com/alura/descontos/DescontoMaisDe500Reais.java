@@ -1,6 +1,5 @@
 package br.com.alura.descontos;
 
-import br.com.alura.model.Desconto;
 import br.com.alura.model.Orcamento;
 
 public class DescontoMaisDe500Reais implements Desconto{

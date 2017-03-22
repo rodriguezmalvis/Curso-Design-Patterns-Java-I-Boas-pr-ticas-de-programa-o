@@ -1,7 +1,7 @@
 package br.com.alura.runner;
 
+import br.com.alura.Investimentos.Investimento;
 import br.com.alura.model.Conta;
-import br.com.alura.model.Investimento;
 
 public class RealizadorDeInvestimentos {
 	

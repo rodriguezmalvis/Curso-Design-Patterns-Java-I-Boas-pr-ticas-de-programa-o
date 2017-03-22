@@ -1,7 +1,6 @@
 package br.com.alura.Investimentos;
 
 import br.com.alura.model.Conta;
-import br.com.alura.model.Investimento;
 
 public class Conservador implements Investimento {
 

@@ -1,5 +1,4 @@
 package br.com.alura.Impostos;
-import br.com.alura.model.Imposto;
 import br.com.alura.model.Orcamento;
 
 public class ICMS implements Imposto{

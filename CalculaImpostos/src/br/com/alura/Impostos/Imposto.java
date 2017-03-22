@@ -1,4 +1,6 @@
-package br.com.alura.model;
+package br.com.alura.Impostos;
+
+import br.com.alura.model.Orcamento;
 
 public interface Imposto {
 	

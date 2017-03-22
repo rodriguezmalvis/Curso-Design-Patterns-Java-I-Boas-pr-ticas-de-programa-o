@@ -1,10 +1,10 @@
 package br.com.alura.runner;
 
+import br.com.alura.descontos.Desconto;
 import br.com.alura.descontos.DescontoMaisDe500Reais;
 import br.com.alura.descontos.DescontoMaisDeCincoItens;
 import br.com.alura.descontos.DescontoPorVendaCasada;
 import br.com.alura.descontos.SemDesconto;
-import br.com.alura.model.Desconto;
 import br.com.alura.model.Item;
 import br.com.alura.model.Orcamento;
 

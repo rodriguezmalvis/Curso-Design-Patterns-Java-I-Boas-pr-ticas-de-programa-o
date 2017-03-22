@@ -3,7 +3,6 @@ package br.com.alura.Investimentos;
 import java.util.Random;
 
 import br.com.alura.model.Conta;
-import br.com.alura.model.Investimento;
 
 public class Arrojado implements Investimento {
 

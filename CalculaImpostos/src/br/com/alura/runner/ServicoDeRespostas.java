@@ -3,7 +3,7 @@ package br.com.alura.runner;
 import br.com.alura.model.Conta;
 import br.com.alura.model.Formato;
 import br.com.alura.model.Requisicao;
-import br.com.alura.model.Resposta;
+import br.com.alura.repostas.Resposta;
 import br.com.alura.repostas.RespostaCSV;
 import br.com.alura.repostas.RespostaPorcento;
 import br.com.alura.repostas.RespostaSemFormato;
@@ -20,6 +20,7 @@ public class ServicoDeRespostas {
 		Resposta r1 = new RespostaXML();
 		Resposta r2 = new RespostaCSV();
 		Resposta r3 = new RespostaPorcento();
+		
 		Resposta r4 = new RespostaSemFormato();
 		
 		r1.setProxima(r2);
