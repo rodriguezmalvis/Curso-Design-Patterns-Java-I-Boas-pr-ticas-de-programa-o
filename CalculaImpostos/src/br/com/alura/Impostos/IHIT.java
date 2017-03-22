@@ -7,6 +7,12 @@ import br.com.alura.model.Orcamento;
 
 public class IHIT extends TemplateImpostosDoisCondicoes{
 
+	public IHIT(Imposto imposto){
+		super(imposto);
+	}
+	
+	public IHIT(){}
+	
 	@Override
 	protected boolean temImpostoMaximo(Orcamento orcamento) {
 		return temDoisItensMesmoNome(orcamento);

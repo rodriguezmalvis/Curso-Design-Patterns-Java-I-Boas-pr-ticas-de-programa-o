@@ -1,7 +1,14 @@
 package br.com.alura.Impostos;
 import br.com.alura.model.Orcamento;
 
-public class ICCC implements Imposto{
+public class ICCC extends Imposto{
+
+	public ICCC(){}
+	
+	public ICCC(Imposto imposto) {
+		super(imposto);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public Double calcula(Orcamento orcamento) {
@@ -15,7 +22,7 @@ public class ICCC implements Imposto{
 			valorDoImposto = orcamento.getValor() * 0.07;
 		}
 
-		return valorDoImposto;
+		return valorDoImposto + calculoOutroImposto(orcamento);
 	}
 
 }

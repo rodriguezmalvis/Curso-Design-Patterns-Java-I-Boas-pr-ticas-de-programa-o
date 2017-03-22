@@ -2,14 +2,20 @@ package br.com.alura.Impostos;
 
 import br.com.alura.model.Orcamento;
 
-public abstract class TemplateImpostosDoisCondicoes implements Imposto{
+public abstract class TemplateImpostosDoisCondicoes extends Imposto{
+	
+	public TemplateImpostosDoisCondicoes() {}
+	
+	public TemplateImpostosDoisCondicoes(Imposto imposto){
+		super(imposto);
+	}
 
 	@Override
 	public Double calcula(Orcamento orcamento) {
 		if(temImpostoMaximo(orcamento)){
-			return impostoMaximo(orcamento);
+			return impostoMaximo(orcamento) + calculoOutroImposto(orcamento);
 		}else{
-			return impostoMinimo(orcamento);
+			return impostoMinimo(orcamento) + calculoOutroImposto(orcamento);
 		}
 	}
 

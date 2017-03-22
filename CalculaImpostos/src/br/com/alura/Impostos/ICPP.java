@@ -4,6 +4,12 @@ import br.com.alura.model.Orcamento;
 
 public class ICPP extends TemplateImpostosDoisCondicoes{
 
+	public ICPP(Imposto imposto){
+		super(imposto);
+	}
+	
+	public ICPP(){}
+	
 	@Override
 	protected boolean temImpostoMaximo(Orcamento orcamento) {
 		return orcamento.getValor() > 500;

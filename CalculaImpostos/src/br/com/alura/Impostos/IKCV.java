@@ -4,6 +4,12 @@ import br.com.alura.model.Item;
 import br.com.alura.model.Orcamento;
 
 public class IKCV extends TemplateImpostosDoisCondicoes{
+	
+	public IKCV(Imposto imposto){
+		super(imposto);
+	}
+	
+	public IKCV(){}
 
 	@Override
 	protected boolean temImpostoMaximo(Orcamento orcamento) {
