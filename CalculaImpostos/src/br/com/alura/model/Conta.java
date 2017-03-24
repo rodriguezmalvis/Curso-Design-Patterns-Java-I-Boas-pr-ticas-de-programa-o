@@ -2,6 +2,8 @@ package br.com.alura.model;
 
 import java.time.LocalDate;
 
+import br.com.alura.estados.EstadoDeUmaConta;
+
 public class Conta {
 	
 	private Double saldo;
@@ -11,6 +13,7 @@ public class Conta {
 	private String telefone;
 	private String email;
 	private LocalDate data;
+	private EstadoDeUmaConta estado;
 	
 	public Conta(String titular) {
 		super();
@@ -80,6 +83,14 @@ public class Conta {
 	public String toString() {
 		return "Conta [saldo=" + saldo + ", titular=" + titular + ", banco=" + banco + ", endereco=" + endereco
 				+ ", telefone=" + telefone + ", email=" + email + ", data=" + data + "]";
+	}
+
+	public EstadoDeUmaConta getEstado() {
+		return estado;
+	}
+
+	public void setEstado(EstadoDeUmaConta estado) {
+		this.estado = estado;
 	}		
 	
 
