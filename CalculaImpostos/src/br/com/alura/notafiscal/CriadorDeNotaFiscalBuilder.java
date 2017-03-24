@@ -2,7 +2,9 @@ package br.com.alura.notafiscal;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
+import br.com.alura.acoes.Acoes;
 import br.com.alura.model.Item;
 
 public class CriadorDeNotaFiscalBuilder {
@@ -14,9 +16,11 @@ public class CriadorDeNotaFiscalBuilder {
 	private Double imposto = 0.0;
 	private String observacoes;
 	private Calendar dataAtual;
+	private List<Acoes> acoes;
 
 	public CriadorDeNotaFiscalBuilder() {
 		dataAtual = Calendar.getInstance();
+		acoes = new ArrayList<>();
 	}
 	
 	public CriadorDeNotaFiscalBuilder paraEmpresa(String empresa){
@@ -49,8 +53,19 @@ public class CriadorDeNotaFiscalBuilder {
 		return this;
 	}
 	
+	public void adicionaAcao(Acoes acao){
+		acoes.add(acao);
+	}
+	
 	public NotaFiscal constroi(){
-		return new NotaFiscal(empresa, cnpj, dataAtual, valorbruto, imposto, todosOsItens, observacoes);
+		
+		NotaFiscal notaFiscal = new NotaFiscal(empresa, cnpj, dataAtual, valorbruto, imposto, todosOsItens, observacoes);
+		
+		for (Acoes acao : acoes) {
+			acao.executa(notaFiscal);
+		}
+		
+		return notaFiscal;
 	}
 	
 }
